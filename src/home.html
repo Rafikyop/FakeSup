@@ -4,69 +4,595 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./app/styles/style.css" />
+    <title>Whatsapp</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto+Condensed:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="./favicon/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="./favicon/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="./favicon/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="./favicon/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="./favicon/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="./favicon/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="./favicon/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="./favicon/apple-icon-152x152.png"
+    />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="../icons/apple-touch-icon.png"
+      href="./favicon/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="./favicon/android-icon-192x192.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="../icons/favicon-32x32.png"
+      href="./favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="./favicon/favicon-96x96.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="../icons/favicon-16x16.png"
+      href="./favicon/favicon-16x16.png"
     />
-    <link rel="manifest" href="/site.webmanifest" />
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"
-      integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <title>FakeSUP</title>
+    <link rel="manifest" href="./favicon/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta
+      name="msapplication-TileImage"
+      content="./favicon/ms-icon-144x144.png"
+    />
+    <meta name="theme-color" content="#ffffff" />
   </head>
+
   <body>
-    <!-- First block -->
-    <header id="header">
-      <div class="header__conversartions">
-        <figure class="header__containerImg">
-          <img
-            class="header__photo"
-            src="https://www.pngitem.com/pimgs/m/368-3687569_sad-boy-stick-figure-clipart-png-download-sad.png"
-            alt="Photo"
-          />
-        </figure>
-      </div>
-      <div class="header__searching">
-        <div class="header__searchingBar">
-          <i class="fa-solid fa-magnifying-glass"></i>
-          <input
-            class="header__input"
-            type="text"
-            placeholder="Buscar o Iniciar un nuevo chat"
-          />
+    <div class="layout">
+      <div class="layout-sidebar">
+        <div class="sidebar">
+          <header class="header p-sticky">
+            <div class="header-profile">
+              <div class="user-profile">
+                <img
+                  src="./images/user-me.jpg"
+                  width="48"
+                  height="48"
+                  alt="Josefa"
+                />
+              </div>
+            </div>
+          </header>
+          <div class="sidebar-content">
+            <div class="title-sidebar-content">
+              <p class="title-sidebar">Todos los chats</p>
+            </div>
+            <div class="form-search">
+              <form
+                class="search"
+                role="search"
+                aria-label="Buscar o iniciar un nuevo chat"
+              >
+                <i class="icon-search-active" aria-hidden="true"></i>
+                <input
+                  type="text"
+                  class="search-input"
+                  placeholder="Buscar o iniciar un nuevo chat"
+                />
+              </form>
+            </div>
+            <div class="contact-list">
+              <div class="container-contact-list">
+                <div class="container-chat-contact-list">
+                  <img
+                    src="./images/contact-1.png"
+                    class="chat-contact-img"
+                    width="48"
+                    height="48"
+                    alt="Ingrid"
+                  />
+                  <div class="chat-profile-details">
+                    <p class="chat-details">
+                      <span class="chat-contact-name">Ingrid</span>
+                      <span class="chat-contact-date">Hoy</span>
+                    </p>
+                    <span class="chat-contact-last-message"
+                      >Amet minim mollit non deserunt t aliqua...</span
+                    >
+                  </div>
+                </div>
+                <div class="container-chat-contact-list" aria-selected="true">
+                  <img
+                    src="./images/contact-2.png"
+                    class="chat-contact-img"
+                    width="48"
+                    height="48"
+                    alt="Josefa"
+                  />
+                  <div class="chat-profile-details">
+                    <p class="chat-details">
+                      <span class="chat-contact-name">Josefa</span>
+                      <span class="chat-contact-date">Viernes</span>
+                    </p>
+                    <span class="chat-contact-last-message"
+                      >Amet minim mollit non deserunt ullamco est sit
+                      aliqua...</span
+                    >
+                  </div>
+                </div>
+                <div class="container-chat-contact-list">
+                  <img
+                    src="./images/contact-3.png"
+                    class="chat-contact-img"
+                    width="48"
+                    height="48"
+                    alt="Jan"
+                  />
+                  <div class="chat-profile-details">
+                    <p class="chat-details">
+                      <span class="chat-contact-name">Jan</span>
+                      <span class="chat-contact-date">Viernes</span>
+                    </p>
+                    <span class="chat-contact-last-message"
+                      >Amet minim mollit non deserunt t aliqua...</span
+                    >
+                  </div>
+                </div>
+                <div class="container-chat-contact-list">
+                  <img
+                    src="./images/contact-4.png"
+                    class="chat-contact-img"
+                    width="48"
+                    height="48"
+                    alt="Ruben"
+                  />
+                  <div class="chat-profile-details">
+                    <p class="chat-details">
+                      <span class="chat-contact-name">Ruben</span>
+                      <span class="chat-contact-date">Viernes</span>
+                    </p>
+                    <span class="chat-contact-last-message"
+                      >Amet minim mollit non deserunt ullamco est sit
+                      aliqua...</span
+                    >
+                  </div>
+                </div>
+                <div class="container-chat-contact-list">
+                  <img
+                    src="./images/contact-5.png"
+                    class="chat-contact-img"
+                    width="48"
+                    height="48"
+                    alt="Dionisio"
+                  />
+                  <div class="chat-profile-details">
+                    <p class="chat-details">
+                      <span class="chat-contact-name">Dionisio</span>
+                      <span class="chat-contact-date">Viernes</span>
+                    </p>
+                    <span class="chat-contact-last-message"
+                      >Amet minim mollit non deserunt t aliqua...</span
+                    >
+                  </div>
+                </div>
+                <div class="container-chat-contact-list">
+                  <img
+                    src="./images/contact-6.png"
+                    class="chat-contact-img"
+                    width="48"
+                    height="48"
+                    alt="Rufino"
+                  />
+                  <div class="chat-profile-details">
+                    <p class="chat-details">
+                      <span class="chat-contact-name">Rufino</span>
+                      <span class="chat-contact-date">Viernes</span>
+                    </p>
+                    <span class="chat-contact-last-message"
+                      >Amet minim mollit non deserunt ullamco est sit
+                      aliqua...</span
+                    >
+                  </div>
+                </div>
+                <div class="container-chat-contact-list">
+                  <img
+                    src="./images/contact-7.png"
+                    class="chat-contact-img"
+                    width="48"
+                    height="48"
+                    alt="Mariano"
+                  />
+                  <div class="chat-profile-details">
+                    <p class="chat-details">
+                      <span class="chat-contact-name">Mariano</span>
+                      <span class="chat-contact-date">Jueves</span>
+                    </p>
+                    <span class="chat-contact-last-message"
+                      >Amet minim mollit non deserunt t aliqua...</span
+                    >
+                  </div>
+                </div>
+                <div class="container-chat-contact-list">
+                  <img
+                    src="./images/contact-8.png"
+                    class="chat-contact-img"
+                    width="48"
+                    height="48"
+                    alt="Pilar"
+                  />
+                  <div class="chat-profile-details">
+                    <p class="chat-details">
+                      <span class="chat-contact-name">Pilar</span>
+                      <span class="chat-contact-date">Jueves</span>
+                    </p>
+                    <span class="chat-contact-last-message"
+                      >Amet minim mollit non deserunt ullamco est sit
+                      aliqua...</span
+                    >
+                  </div>
+                </div>
+                <div class="container-chat-contact-list">
+                  <img
+                    src="./images/contact-9.png"
+                    class="chat-contact-img"
+                    width="48"
+                    height="48"
+                    alt="Ryan"
+                  />
+                  <div class="chat-profile-details">
+                    <p class="chat-details">
+                      <span class="chat-contact-name">Ryan</span>
+                      <span class="chat-contact-date">Miercoles</span>
+                    </p>
+                    <span class="chat-contact-last-message"
+                      >Amet minim mollit non deserunt t aliqua...</span
+                    >
+                  </div>
+                </div>
+                <div class="container-chat-contact-list">
+                  <img
+                    src="./images/contact-10.png"
+                    class="chat-contact-img"
+                    width="48"
+                    height="48"
+                    alt="Ariana"
+                  />
+                  <div class="chat-profile-details">
+                    <p class="chat-details">
+                      <span class="chat-contact-name">Ariana</span>
+                      <span class="chat-contact-date">Miercoles</span>
+                    </p>
+                    <span class="chat-contact-last-message"
+                      >Amet minim mollit non deserunt t aliqua...</span
+                    >
+                  </div>
+                </div>
+                <div class="container-chat-contact-list">
+                  <img
+                    src="./images/contact-11.png"
+                    class="chat-contact-img"
+                    width="48"
+                    height="48"
+                    alt="Ruth"
+                  />
+                  <div class="chat-profile-details">
+                    <p class="chat-details">
+                      <span class="chat-contact-name">Ruth</span>
+                      <span class="chat-contact-date">Miercoles</span>
+                    </p>
+                    <span class="chat-contact-last-message"
+                      >Amet minim mollit non deserunt t aliqua...</span
+                    >
+                  </div>
+                </div>
+                <div class="container-chat-contact-list">
+                  <img
+                    src="./images/contact-12.png"
+                    class="chat-contact-img"
+                    width="48"
+                    height="48"
+                    alt="Raul"
+                  />
+                  <div class="chat-profile-details">
+                    <p class="chat-details">
+                      <span class="chat-contact-name">Raul</span>
+                      <span class="chat-contact-date">Martes</span>
+                    </p>
+                    <span class="chat-contact-last-message"
+                      >Amet minim mollit non deserunt t aliqua...</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sidebar-profile">
+            <header class="header-profile-edit">
+              <div class="navigation-back-profile-edit">
+                <i class="icon-arrow-left" aria-hidden="true"></i>
+                <h1 class="navigation-back-profile-edit-title">Perfil</h1>
+              </div>
+            </header>
+            <div class="profile-edit-image">
+              <div class="profile-edit-background-image">
+                <img
+                  src="./images/user-background.png"
+                  width="137"
+                  height="148"
+                  alt="user-background"
+                />
+              </div>
+              <div class="profile-edit-change-image">
+                <i class="icon-camera" aria-hidden="true"></i>
+                <span>Cambiar imagen</span>
+              </div>
+            </div>
+            <div class="profile-edit-name">
+              <p class="profile-edit-name-text">Tu nombre</p>
+              <span class="profile-edit-name-edit">
+                <p>César Choquehuanca</p>
+                <i class="icon-edit" aria-hidden="true"></i>
+              </span>
+            </div>
+          </div>
         </div>
       </div>
-      <!-- Firts block done  -->
-      <div class="header__principal">
-        <figure>
-          <img class="header__photo" src="" alt="Photo" />
-        </figure>
-        <div>
-          <a href="busqueda"><img src="" alt="Lupa" /></a>
+      <div class="layout-main">
+        <div class="chat">
+          <header class="header">
+            <div class="header-primary">
+              <div class="user">
+                <div class="navigation-back">
+                  <i class="icon-arrow-left" aria-hidden="true"></i>
+                </div>
+                <img
+                  class="user-image"
+                  src="./images/user.jpg"
+                  width="48"
+                  height="48"
+                  alt="Josefa"
+                />
+                <p>
+                  <span class="user-name">Josefa</span>
+                  <span class="user-status">EN LÍNEA</span>
+                </p>
+              </div>
+            </div>
+            <div class="header-secondary">
+              <i class="icon-search-active" aria-hidden="true"></i>
+            </div>
+          </header>
+          <div class="background-message-list">
+            <div class="message-list">
+              <div class="message is-receiver">
+                <div class="message-body">
+                  <p class="message-text">🙌🏽🙌🏽</p>
+                </div>
+                <div class="message-details">
+                  <span class="message-date">10:32 am</span>
+                </div>
+              </div>
+              <div class="message is-sender">
+                <div class="message-body">
+                  <p class="message-text">
+                    Dale.. mucha suerte, me escribes cualquier duda..
+                    #NoTeRindas
+                  </p>
+                </div>
+                <div class="message-details">
+                  <span class="message-date">11:32 am</span>
+                  <span class="message-status is-dobleCheck"></span>
+                </div>
+              </div>
+              <div class="message is-receiver">
+                <div class="message-body">
+                  <p class="message-text">Ahora mismoo...</p>
+                </div>
+                <div class="message-details">
+                  <span class="message-date">11:31 am</span>
+                </div>
+              </div>
+              <div class="message is-sender">
+                <div class="message-body">
+                  <p class="message-text">
+                    Este es el post, en donde me base lo que te mencione, esta
+                    genial,
+                  </p>
+                  <p class="message-text">
+                    dale una chequeada:
+                    https://leonidasesteban.com/blog/que-hay-detras-de-flex-1
+                  </p>
+                </div>
+                <div class="message-details">
+                  <span class="message-date">11:30 am</span>
+                </div>
+              </div>
+              <div class="message is-sender">
+                <div class="message-body">
+                  <p class="message-text">
+                    Hola, +- en realidad, la encontre en un post, deja que te
+                    comparto el link
+                  </p>
+                </div>
+                <div class="message-details">
+                  <span class="message-date">11:27 am</span>
+                  <span class="message-status is-dobleCheck"></span>
+                </div>
+              </div>
+              <div class="message is-receiver">
+                <div class="message-body">
+                  <p class="message-text">
+                    Hola !!! Disculpa la info que me diste ayer, la sacastes de
+                    google?
+                  </p>
+                </div>
+                <div class="message-details">
+                  <span class="message-date">11:24 am</span>
+                </div>
+              </div>
+              <div class="date">Viernes</div>
+              <div class="message is-receiver">
+                <div class="message-body">
+                  <p class="message-text">Increible, Muchas Gracias</p>
+                </div>
+                <div class="message-details">
+                  <span class="message-date">10:42 pm</span>
+                </div>
+              </div>
+              <div class="message is-sender">
+                <div class="message-body">
+                  <p class="message-text">
+                    Flex Basis Es la base Flexible sobre la cual hacer cálculos
+                    tanto para expansión o reducción.
+                  </p>
+                </div>
+                <div class="message-details">
+                  <span class="message-date">10:40 pm</span>
+                  <span class="message-status is-dobleCheck"></span>
+                </div>
+              </div>
+              <div class="message is-sender">
+                <div class="message-body">
+                  <p class="message-text">
+                    Flex Shrink Es la capacidad de "achicamiento" o reducción de
+                    un flex item.
+                  </p>
+                </div>
+                <div class="message-details">
+                  <span class="message-date">10:37 pm</span>
+                  <span class="message-status is-dobleCheck"></span>
+                </div>
+              </div>
+              <div class="message is-sender">
+                <div class="message-body">
+                  <p class="message-text">
+                    flex:1, esta compuesto inicialmente por esto: Flex Grow Es
+                    la capacidad de "agrandamiento" o expansión de un flex item.
+                  </p>
+                </div>
+                <div class="message-details">
+                  <span class="message-date">10:36 pm</span>
+                  <span class="message-status is-dobleCheck"></span>
+                </div>
+              </div>
+              <div class="message is-sender">
+                <div class="message-body">
+                  <p class="message-text">
+                    Ah mira.. tambien tuve mi tiempo buscando info sobre
+                    eso..pero ahi te digo
+                  </p>
+                </div>
+                <div class="message-details">
+                  <span class="message-date">10:36 pm</span>
+                </div>
+              </div>
+              <div class="message is-receiver">
+                <div class="message-body">
+                  <p class="message-text">
+                    Flex:1 , de que trata.... no lo logro enteder. :(
+                  </p>
+                </div>
+                <div class="message-details">
+                  <span class="message-date">10:35 pm</span>
+                </div>
+              </div>
+              <div class="message is-sender">
+                <div class="message-body">
+                  <p class="message-text">Claro. Sin problemas,</p>
+                </div>
+                <div class="message-details">
+                  <span class="message-date">10:32 pm</span>
+                  <span class="message-status is-dobleCheck"></span>
+                </div>
+              </div>
+              <div class="message is-receiver">
+                <div class="message-body">
+                  <p class="message-text">
+                    Que buenooo, me ayudas con una consulta.. sobre FlexBox
+                    plss!!
+                  </p>
+                </div>
+                <div class="message-details">
+                  <span class="message-date">10:30 pm</span>
+                </div>
+              </div>
+              <div class="message is-sender">
+                <div class="message-body">
+                  <p class="message-text">euuu, a los tiempos, bien bien..</p>
+                </div>
+                <div class="message-details">
+                  <span class="message-date">10:28 pm</span>
+                  <span class="message-status is-dobleCheck"></span>
+                </div>
+              </div>
+              <div class="message is-receiver">
+                <div class="message-body">
+                  <p class="message-text">Hola!! Como te va....</p>
+                </div>
+                <div class="message-details">
+                  <span class="message-date">10:27 pm</span>
+                </div>
+              </div>
+              <div class="date">Jueves</div>
+            </div>
+          </div>
+          <div class="action-list">
+            <i class="icon-smile" aria-hidden="true"></i>
+            <i class="icon-paper-click" aria-hidden="true"></i>
+            <form class="action">
+              <input
+                type="text"
+                class="action-input"
+                placeholder="Escribe un mensaje"
+              />
+            </form>
+            <i class="icon-microphone" aria-hidden="true"></i>
+          </div>
         </div>
       </div>
-    </header>
-
-    <span id="nameUser">Hola</span>
-
-    <button id="btnCloseSession">Cerrar Sesión</button>
+    </div>
   </body>
 </html>
